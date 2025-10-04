@@ -318,13 +318,11 @@ class HMACAlgorithm(Algorithm):
 
     def prepare_key(self, key: str | bytes) -> bytes:
         key_bytes = force_bytes(key)
-'''
-        if is_pem_format(key_bytes) or is_ssh_key(key_bytes):
-            raise InvalidKeyError(
-                "The specified key is an asymmetric key or x509 certificate and"
-                " should not be used as an HMAC secret."
-            )
-'''
+#        if is_pem_format(key_bytes) or is_ssh_key(key_bytes):
+#            raise InvalidKeyError(
+#                "The specified key is an asymmetric key or x509 certificate and"
+#                " should not be used as an HMAC secret."
+#            )
         return key_bytes
 
     @overload
