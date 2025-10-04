@@ -318,7 +318,6 @@ class HMACAlgorithm(Algorithm):
 
     def prepare_key(self, key: str | bytes) -> bytes:
         key_bytes = force_bytes(key)
-
 '''
         if is_pem_format(key_bytes) or is_ssh_key(key_bytes):
             raise InvalidKeyError(
@@ -326,7 +325,6 @@ class HMACAlgorithm(Algorithm):
                 " should not be used as an HMAC secret."
             )
 '''
-
         return key_bytes
 
     @overload
